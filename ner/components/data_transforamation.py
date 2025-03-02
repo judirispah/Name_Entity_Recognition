@@ -37,10 +37,12 @@ class DataTransformation:
             unique_labels = set()
             for lb in labels:
                 [unique_labels.add(i) for i in lb if i not in unique_labels]
+                print(unique_labels)
 
                 #Creating Label-to-ID and ID-to-Label Mappings
                 labels_to_ids = {k: v for v, k in enumerate(unique_labels)}
                 ids_to_labels = {v: k for v, k in enumerate(unique_labels)}
+                print(labels_to_ids)
 
 
                 #split

@@ -39,6 +39,30 @@ class DataTransformationConfig:
            data_transformation_artifacts_dir, UNIQUE_LABELS_FILE_NAME
         )
     
+@dataclass
+class ModelTrainingConfig:
+    
+    model_training_artifacts_dir: str = os.path.join(
+            ARTIFACTS_DIR, MODEL_TRAINING_ARTIFACTS_DIR
+        )
+    bert_model_instance_path: str = os.path.join(
+            model_training_artifacts_dir, AWS_MODEL_NAME
+        )
+    tokenizer_file_path: str = os.path.join(
+          model_training_artifacts_dir, TOKENIZER_FILE_NAME
+        )
+    
+
+@dataclass
+class ModelEvalConfig:
+   
+        model_evaluation_artifacts_dir: str = os.path.join(
+            ARTIFACTS_DIR, MODEL_EVALUATION_ARTIFACTS_DIR
+        )    
+    
+
+
+    
 
 
 
